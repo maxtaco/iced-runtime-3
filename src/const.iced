@@ -30,3 +30,5 @@ module.exports =
   trampoline : "trampoline"
   context : "context"
   defer_arg : "__iced_defer_"
+  iterator : "__iced_it"
+  await_exit : "await_exit"

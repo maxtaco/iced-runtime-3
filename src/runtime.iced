@@ -79,29 +79,34 @@ exports.Deferrals = class Deferrals
 
   #----------
 
-  constructor: (k, @trace) ->
-    @continuation = k
-    @count = 1
+  constructor: (@iterator, @trace) ->
+    @count = 0
     @ret = null
 
   #----------
 
   _call : (trace) ->
-    if @continuation
+    if @iterator
       __active_trace = trace
-      c = @continuation
-      @continuation = null
-      c @ret
+      i = @iterator
+      @iterator = null
+      i.next(@ret)
     else
       warn "Entered dead await at #{_trace_to_string trace}"
 
   #----------
 
   _fulfill : (id, trace) ->
-    if --@count > 0
-      # noop
+    if --@count <= 0 then @_call trace
+
+  #----------
+
+  await_exit : () ->
+    if @count == 0
+      @iterator = null
+      return false
     else
-      trampoline ( () => @_call trace )
+      return true
 
   #----------
 
