@@ -1,3 +1,7 @@
+## 3.0.2 (2015-11-23)
+
+- compile once to fix cyclic dependency
+
 ## 1.0.3 (2015-09-03)
 
 Bugfix:
