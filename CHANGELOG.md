@@ -1,3 +1,7 @@
+## 3.0.3 (2016-04-03)
+
+- Fix race condition in await exits and immediate callbacks
+
 ## 3.0.2 (2015-11-23)
 
 - compile once to fix cyclic dependency
