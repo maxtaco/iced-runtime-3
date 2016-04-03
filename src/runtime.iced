@@ -80,7 +80,7 @@ exports.Deferrals = class Deferrals
   #----------
 
   constructor: (@iterator, @trace) ->
-    @count = 0
+    @count = 1
     @ret = null
     @yielded = false
 
@@ -104,6 +104,8 @@ exports.Deferrals = class Deferrals
   #----------
 
   await_exit : () ->
+    @_fulfill()
+
     if @count == 0
       @iterator = null
       return false
