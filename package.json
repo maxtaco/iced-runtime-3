@@ -1,6 +1,6 @@
 {
   "name": "iced-runtime-3",
-  "version": "3.0.2",
+  "version": "3.0.3",
   "description": "Runtime for IcedCoffeeScript",
   "main": "lib/main.js",
   "scripts": {
