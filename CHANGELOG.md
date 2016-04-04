@@ -1,3 +1,7 @@
+## 3.0.4 (2016-04-03)
+
+- Recompile with the correct compiler
+
 ## 3.0.3 (2016-04-03)
 
 - Fix race condition in await exits and immediate callbacks
