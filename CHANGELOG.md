@@ -1,3 +1,8 @@
+## 3.0.5 (2019-09-12)
+
+ - Recompile with iced3
+ - cleanup tickers
+
 ## 3.0.4 (2016-04-03)
 
 - Recompile with the correct compiler
